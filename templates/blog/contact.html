@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block bar %}
+    <div class="col-md-3 ">
+        <div class="visible-md visible-lg">
+            <div class="panel panel-zan random">
+                <div class="panel-heading bar-heading">
+                    最新文章
+                </div>
+                <ul class="bar-list list-unstyled">
+                    {% for bar in bar_list %}
+                    <li><a href="/article/{{ bar.id }}">{{ bar.title }}</a></li>
+                    {% empty %}
+                    <li><a>暂无文章</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock bar %}
+{% block main %}
+    <div class="contact_f">
+<a class="no-underline" href="http://veritas501.space/" target="_blank">
+    <div class="thumb">
+        <img src="http://veritas501.space/images/avatar.gif" alt="veritas501" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>veritas501</h3>
+        </div>
+    </div>
+</a>
+<a class="no-underline" href="http://fantasyqt.ink" target="_blank">
+    <div class="thumb">
+        <img src="http://fantasyqt.ink/images/avatar.png" alt="fantasyqt" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>fantasyqt</h3>
+        </div>
+    </div>
+</a>
+<a class="no-underline" href="http://vvv-347.space/" target="_blank">
+    <div class="thumb">
+        <img src="http://vvv-347.space/images/avatar.gif" alt="vvv-347" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>vvv-347</h3>
+        </div>
+    </div>
+</a>
+<a class="no-underline" href="http://hammerorz.com/" target="_blank" style="float: right">
+    <div class="thumb">
+        <img src="https://omdktbqq4.qnssl.com/cnlogo8imv5mnt01vx.jpg" alt="hammer" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>hammer</h3>
+        </div>
+    </div>
+</a>
+    </div>
+    <div class="contact_f">
+<a class="no-underline" href="https://b0lv42.github.io/" target="_blank">
+    <div class="thumb">
+        <img src="https://b0lv42.github.io/img/%E5%A4%B4%E5%83%8F.jpeg" alt="b0lv42" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>b0lv42</h3>
+        </div>
+    </div>
+</a>
+<a class="no-underline" href="http://heartsky.info/" target="_blank">
+    <div class="thumb">
+        <img src="http://7xqn7l.com1.z0.glb.clouddn.com/1.jpg" alt="heartsky" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>heartsky</h3>
+        </div>
+    </div>
+</a>
+<a class="no-underline" href="http://123.206.203.108/" target="_blank">
+    <div class="thumb">
+        <img src="http://123.206.203.108/usr/saber.jpg" alt="yiyezhiqu" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>一叶知秋</h3>
+        </div>
+    </div>
+</a>
+<a class="no-underline" href="https://c014.cn/" target="_blank" style="float: right">
+    <div class="thumb">
+        <img src="https://c014.cn/img/avatar.png" alt="c014" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>c014</h3>
+        </div>
+    </div>
+</a>
+    </div>
+    <div class="contact_f">
+<a class="no-underline" href="https://lorexxar.cn/" target="_blank">
+    <div class="thumb">
+        <img src="http://img.tuwandata.com/v2/thumb/all/NzA2NCw4MDEsMjAwLDQsMywxLC0xLDEs/u/www.tuwan.com/uploads/allimg/1404/08/699-14040QPP9.jpg" alt="lorexxar" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>lorexxar</h3>
+        </div>
+    </div>
+</a>
+<a class="no-underline" href="http://processor.pub/" target="_blank">
+    <div class="thumb">
+        <img src="http://processor.pub/img/bg_img.jpg" alt="processor" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>processor</h3>
+        </div>
+    </div>
+</a>
+<a class="no-underline" href="http://0x48.pw/" target="_blank">
+    <div class="thumb">
+        <img src="{% static 'blog/images/Hcamael.png' %}" alt="Hcamael" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>Hcamael</h3>
+        </div>
+    </div>
+</a>
+<a class="no-underline" href="https://lightless.me/" target="_blank" style="float: right">
+    <div class="thumb">
+        <img src="https://ol72orml7.qnssl.com/56536771_head2.png" alt="lightless" width="200" height="200">
+    </div>
+    <div class="content">
+        <div class="title">
+            <span id="menu_index_1"></span>
+            <h3>lightless</h3>
+        </div>
+    </div>
+</a>
+    </div>
+
+{% endblock main %}
+{% block footer %}
+    {% for footer in footer_list %}
+    <li><a class="footer-post" href="tags/{{ footer.id }}">{{ footer.names }}</a></li>
+    {% empty %}
+    <li><a class="footer-post" href="">暂无分类</a></li>
+    {% endfor %}
+{% endblock footer%}

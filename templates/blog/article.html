@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+<!--header-->
+<!--right bar-->
+{% block bar %}
+    <div class="col-md-3 ">
+        <div class="visible-md visible-lg">
+            <div class="panel panel-zan random">
+                <div class="panel-heading bar-heading">
+                    最新文章
+                </div>
+                <ul class="bar-list list-unstyled">
+                    {% for bar in bar_list %}
+                    <li><a href="/article/{{ bar.id }}">{{ bar.title }}</a></li>
+                    {% empty %}
+                    <li><a>暂无文章</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock bar %}
+{% block main %}
+    <!--article-->
+    <div class="col-md-9 article-type">
+        <div class="content-wrap index">
+            <h1 class="title article-head">
+                <a href="">
+                    {{ article.title }}
+                </a>
+            </h1>
+            <div class="post-info">
+                    <span class="date">2017-07-20</span>
+                    <a href="/" class="comments article-comment-link">ngc7293</a>
+            </div>
+        </div>
+        <div class="content">
+            {{ article.body|safe }}
+        </div>
+    </div>
+{% endblock main %}
+{% block footer %}
+    {% for footer in footer_list %}
+    <li><a class="footer-post" href="tags/{{ footer.id }}">{{ footer.names }}</a></li>
+    {% empty %}
+    <li><a class="footer-post" href="">暂无分类</a></li>
+    {% endfor %}
+{% endblock footer%}

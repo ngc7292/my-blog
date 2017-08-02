@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block bar %}
+    <div class="col-md-3 ">
+        <div class="visible-md visible-lg">
+            <div class="panel panel-zan random">
+                <div class="panel-heading bar-heading">
+                    最新文章
+                </div>
+                <ul class="bar-list list-unstyled">
+                    {% for bar in bar_list %}
+                    <li><a>{{ bar.title }}</a></li>
+                    {% empty %}
+                    <li><a>暂无文章</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock bar %}
+{% block main %}
+
+    <!--article-->
+{%  for tag in tag_list %}
+    <div class="col-md-9 article-type">
+        <div class="content-wrap index">
+            <h1 class="title article-list">
+                <a href="/tags/{{ tag.id }}">
+                    {{ tag.names }}
+                </a>
+            </h1>
+    </div>
+    </div>
+{%  empty %}
+        <div class="col-md-9 article-type">
+        <div class="content-wrap index">
+            <h1 class="title article-head">
+                致歉
+            </h1>
+            <div class="post-info">
+                    <span class="date">2017-07-20</span>
+                    <a href="" class="comments article-comment-link">Kommentare</a>
+            </div>
+        </div>
+            <div class="content">
+                <p>暂时没有文章发表</p>
+            </div>
+    </div>
+    </div>
+{% endfor %}
+{% endblock main %}
+{% block footer %}
+    {% for footer in footer_list %}
+    <li><a class="footer-post" href="tag/{{ footer.names }}">{{ footer.names }}</a></li>
+    {% empty %}
+    <li><a class="footer-post" href="">暂无分类</a></li>
+    {% endfor %}
+{% endblock footer%}
